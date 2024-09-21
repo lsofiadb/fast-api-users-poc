@@ -55,6 +55,7 @@ class Transaction(BaseModel):
 
 class TransactionCreate(BaseModel):
     product_id: int
+    amount: float
 
 class Token(BaseModel):
     access_token: str

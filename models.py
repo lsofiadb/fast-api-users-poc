@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, Float
 from sqlalchemy.orm import relationship
 from database import Base
 
@@ -37,5 +37,6 @@ class Transaction(Base):
     user_id = Column(Integer, ForeignKey('users.id'))
     product_id = Column(Integer, ForeignKey('products.id'))
     approved = Column(Boolean, default=False)
+    amount = Column(Float) 
     user = relationship("User")
     product = relationship("Product")

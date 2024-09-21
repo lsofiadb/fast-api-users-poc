@@ -44,7 +44,11 @@ def get_products(db: Session):
     return db.query(models.Product).all()
 
 def create_transaction(db: Session, transaction: schemas.TransactionCreate, user_id: int):
-    db_transaction = models.Transaction(user_id=user_id, product_id=transaction.product_id)
+    db_transaction = models.Transaction(
+        user_id=user_id,
+        product_id=transaction.product_id,
+        amount=transaction.amount
+    )
     db.add(db_transaction)
     db.commit()
     db.refresh(db_transaction)
