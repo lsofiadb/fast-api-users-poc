@@ -14,21 +14,29 @@ Make sure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your_username/your_repository.git
-   cd your_repository
+   git clone https://github.com/lsofiadb/fast-api-users-poc.git
+   
 2. Create a virtual environment and activate it:
+```bash
 python -m venv env
-
+  ```
+```bash
 .\env\Scripts\Activate      
-
+  ```
+```bash
 deactivate
-
+  ```
 Install the dependencies:
-
+```bash
 pip install -r requirements.txt
+  ```
 
-Running the Application
+### Running the Application
 To run the application, use the following command:
+```bash
 uvicorn main:app --reload
+  ```
 
 This will start the server at http://127.0.0.1:8000
+
+You can test the endpoints available [here!](https://documenter.getpostman.com/view/17256808/2sAXqtaM5g)
